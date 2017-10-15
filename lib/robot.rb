@@ -9,7 +9,8 @@ class Robot
       "SOUTH" => "EAST",
       "EAST" => "NORTH",
     }
-    self.orientation = new_orientation(self.orientation)
+    self.orientation = new_orientation[self.orientation]
+
   end
 
   def right

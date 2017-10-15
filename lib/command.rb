@@ -34,6 +34,8 @@ class Command
       left
     when 'RIGHT'
       right
+    when 'EXIT'
+      exit
     else
       "Don't understand command"
     end
