@@ -37,7 +37,7 @@ class Command
     when 'EXIT'
       exit
     else
-      "Don't understand command"
+      puts "Don't understand command"
     end
 
   end
