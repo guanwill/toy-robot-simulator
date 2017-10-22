@@ -3,14 +3,16 @@
 
 ## Instructions
 
-To run the application, start at the root of the application:
+To run the application:
 ~~~~
+Start at root of application
 cd lib
 ruby play.rb
 ~~~~
 
 To run tests:
 ~~~~
+Start at root of application
 bundle exec rspec
 ~~~~
 
