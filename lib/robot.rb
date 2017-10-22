@@ -10,7 +10,7 @@ class Robot
       "EAST" => "NORTH",
     }
     self.orientation = new_orientation[self.orientation]
-
+    Messages.robot_action_confirm
   end
 
   def right
@@ -21,11 +21,14 @@ class Robot
       "WEST" => "NORTH",
     }
     self.orientation = new_orientation[self.orientation]
+    Messages.robot_action_confirm
   end
 
   def direction(orientation)
     if ["NORTH", "SOUTH", "EAST", "WEST"].include?(orientation)
       self.orientation = orientation
+    else
+      false
     end
   end
 

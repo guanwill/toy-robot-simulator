@@ -1,6 +1,7 @@
 require 'pry'
 require_relative './robot'
 require_relative './table'
+require_relative './messages'
 
 class Command
 
@@ -10,8 +11,9 @@ class Command
   end
 
   def initiate
+    Messages.introduction_instructions
     loop do
-      puts "Please enter a command..."
+      puts "\nPlease enter a command below..."
       run_command(gets.chomp.upcase)
     end
   end
@@ -34,10 +36,12 @@ class Command
       left
     when 'RIGHT'
       right
+    when 'HELP'
+      help
     when 'EXIT'
       exit
     else
-      puts "Don't understand command"
+      Messages.invalid_command
     end
 
   end
@@ -48,15 +52,19 @@ class Command
      y = arguments_split[1].to_i
      orientation = arguments_split[2]
 
-     @table.place(x,y)
-     @robot.direction(orientation)
+     if @table.valid_coordinates?(x,y) && @robot.direction(orientation)
+       @table.place(x,y)
+       Messages.robot_placement_confirm
+     else
+       Messages.robot_invalid_placement
+     end
   end
 
   def left
     if @table.robot_present?
       @robot.left
     else
-      puts "Robot not placed"
+      Messages.robot_not_placed
       return
     end
   end
@@ -65,7 +73,7 @@ class Command
     if @table.robot_present?
       @robot.right
     else
-      puts "Robot not placed"
+      Messages.robot_not_placed
       return
     end
   end
@@ -74,13 +82,17 @@ class Command
     if @table.robot_present?
       vector = @robot.vector
       position = @table.robot_position
+    else
+      Messages.robot_not_placed
+      return
     end
 
     # move robot by 1
+
     if @table.place(position[:x] + vector[:x], position[:y] + vector[:y])
-      nil
+      Messages.robot_action_confirm
     else
-      'Off table'
+      Messages.off_table
     end
   end
 
@@ -88,10 +100,14 @@ class Command
     if @table.robot_present?
       position = @table.robot_position
       orientation = @robot.orientation
-      puts "#{position[:x]},#{position[:y]},#{orientation.to_s.upcase}"
+      Messages.report(position, orientation)
     else
-      puts "Robot not placed"
+      Messages.robot_not_placed
     end
+  end
+
+  def help
+    Messages.introduction_instructions
   end
 
 
