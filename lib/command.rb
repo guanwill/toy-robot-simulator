@@ -63,6 +63,7 @@ class Command
   def left
     if @table.robot_present?
       @robot.left
+      Messages.robot_action_confirm
     else
       Messages.robot_not_placed
       return
@@ -72,6 +73,7 @@ class Command
   def right
     if @table.robot_present?
       @robot.right
+      Messages.robot_action_confirm
     else
       Messages.robot_not_placed
       return
