@@ -1,4 +1,4 @@
-module Messages
+class Messages
 
   def introduction_instructions
     puts "---------------------------"

@@ -8,17 +8,18 @@ class Command
   def initialize
     @table = Table.new
     @robot = Robot.new
+    @messages = Messages.new
   end
 
   def initiate
-    Messages.introduction_instructions
+    @messages.introduction_instructions
     loop do
       puts "\nPlease enter a command below..."
-      run_command(gets.chomp.upcase)
+      execute(gets.chomp.upcase)
     end
   end
 
-  def run_command(input)
+  def execute(input)
     return if input.strip.empty?
 
     input_split = input.split(/\s+/) #splits the input according to one or more space characters
@@ -41,7 +42,7 @@ class Command
     when 'EXIT'
       exit
     else
-      Messages.invalid_command
+      @messages.invalid_command
     end
 
   end
@@ -54,29 +55,27 @@ class Command
 
      if @table.valid_coordinates?(x,y) && @robot.direction(orientation)
        @table.place(x,y)
-       Messages.robot_placement_confirm
+       @messages.robot_placement_confirm
      else
-       Messages.robot_invalid_placement
+       @messages.robot_invalid_placement
      end
   end
 
   def left
     if @table.robot_present?
       @robot.left
-      Messages.robot_action_confirm
+      @messages.robot_action_confirm
     else
-      Messages.robot_not_placed
-      return
+      return @messages.robot_not_placed
     end
   end
 
   def right
     if @table.robot_present?
       @robot.right
-      Messages.robot_action_confirm
+      @messages.robot_action_confirm
     else
-      Messages.robot_not_placed
-      return
+      return @messages.robot_not_placed
     end
   end
 
@@ -85,16 +84,15 @@ class Command
       vector = @robot.vector
       position = @table.robot_position
     else
-      Messages.robot_not_placed
-      return
+      return @messages.robot_not_placed
     end
 
     # move robot by 1
 
     if @table.place(position[:x] + vector[:x], position[:y] + vector[:y])
-      Messages.robot_action_confirm
+      @messages.robot_action_confirm
     else
-      Messages.off_table
+      @messages.off_table
     end
   end
 
@@ -102,14 +100,14 @@ class Command
     if @table.robot_present?
       position = @table.robot_position
       orientation = @robot.orientation
-      Messages.report(position, orientation)
+      @messages.report(position, orientation)
     else
-      Messages.robot_not_placed
+      @messages.robot_not_placed
     end
   end
 
   def help
-    Messages.introduction_instructions
+    @messages.introduction_instructions
   end
 
 
