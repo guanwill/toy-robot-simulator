@@ -88,7 +88,6 @@ class Command
     end
 
     # move robot by 1
-
     if @table.place(position[:x] + vector[:x], position[:y] + vector[:y])
       @messages.robot_action_confirm
     else
@@ -101,6 +100,7 @@ class Command
       position = @table.robot_position
       orientation = @robot.orientation
       @messages.report(position, orientation)
+      return "#{position[:x]},#{position[:y]},#{orientation.to_s.upcase}"
     else
       @messages.robot_not_placed
     end
