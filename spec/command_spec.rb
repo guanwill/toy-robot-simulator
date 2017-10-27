@@ -5,81 +5,59 @@ require_relative '../lib/command'
 require_relative '../lib/messages'
 
 describe 'taking commands before robot placement' do
+  let(:table) { Table.new }
+  let(:robot) { Robot.new }
+  let(:command) { Command.new }
 
   context "when input is empty" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
     it "will be do nothing" do
       expect(command.execute("")).to be_nil
     end
   end
 
   context "when input is white space" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
     it "will do nothing" do
       expect(command.execute("   ")).to be_nil
     end
   end
 
   context "when input is an invalid command" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
     it "will show an error message" do
       expect{command.execute("JUMP")}.to output("\n````ERROR````\nInvalid Command. Please try again or type HELP for instructions.\n").to_stdout
     end
   end
 
-  context "when input is anything but PLACE and Invalid Command before placing robot" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
+  context "when input is a valid command, but is not PLACE, before placing robot" do
     it "will show an error message" do
       expect{command.execute("MOVE")}.to output("\n````ERROR````\nYou have not placed the Robot on the table yet. Try enter PLACE,X,Y,DIRECTION\n").to_stdout
     end
   end
 
   context "when input is PLACE with invalid coordinates" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
     it "will show an error message" do
       expect{command.execute("PLACE 6,6,NORTH")}.to output("\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n").to_stdout
     end
   end
 
   context "when input is PLACE with invalid direction" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
     it "will show an error message" do
       expect{command.execute("PLACE 2,2,DOWN")}.to output("\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n").to_stdout
     end
   end
 
   context "when input is PLACE with valid coordinates and direction" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
     it "will show a confirm message" do
       expect{command.execute("PLACE 2,2,NORTH")}.to output("\n````CONFIRM````\nRobot has been placed. You can enter REPORT to see current robot position\n").to_stdout
     end
   end
-
 end
 
-
-
 describe 'taking commands after robot placement' do
+  let(:table) { Table.new }
+  let(:robot) { Robot.new }
+  let(:command) { Command.new }
 
   context "when input is LEFT or RIGHT after robot placement" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
-
     before do
       command.execute("PLACE 2,2,NORTH")
     end
@@ -90,10 +68,6 @@ describe 'taking commands after robot placement' do
   end
 
   context "when input is REPORT after robot placement" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
-
     before do
       command.execute('PLACE 2,2,NORTH')
     end
@@ -105,10 +79,6 @@ describe 'taking commands after robot placement' do
   end
 
   context "when input is MOVE after robot placement and is within bounds" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
-
     before do
       command.execute('PLACE 2,2,NORTH')
     end
@@ -119,10 +89,6 @@ describe 'taking commands after robot placement' do
   end
 
   context "when input is MOVE after robot placement and is out of bounds" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
-
     before do
       command.execute('PLACE 5,5,NORTH')
     end
@@ -133,10 +99,6 @@ describe 'taking commands after robot placement' do
   end
 
   context "when input is PLACE after robot placement and is a valid placement" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
-
     before do
       command.execute('PLACE 5,5,NORTH')
     end
@@ -147,10 +109,6 @@ describe 'taking commands after robot placement' do
   end
 
   context "when input is PLACE after robot placement and is an invalid placement" do
-    table = Table.new
-    robot = Robot.new
-    command = Command.new
-
     before do
       command.execute('PLACE 5,5,NORTH')
     end
