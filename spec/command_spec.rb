@@ -158,7 +158,7 @@ end
 describe "when input is HELP" do
   let(:command) { Command.new }
   it "will show instructions" do
-    expect{command.help}.to output(
+    expect{command.execute('HELP')}.to output(
       "---------------------------\nINSTRUCTIONS\n---------------------------\nYour key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT.\n\n--- PLACE X,Y,D ---\nIt will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example: PLACE 2,2,NORTH\n\n--- MOVE ---\nIt will move the toy robot one unit forward in the direction it is currently facing.\n\n--- LEFT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- RIGHT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- REPORT ---\nIt will announce the X,Y and F of the robot.\n\n--- HELP ---\nIt will display the instructions.\n\n--- EXIT ---\nIt will exit the application\n"
     ).to_stdout
   end

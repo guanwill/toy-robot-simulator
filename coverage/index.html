@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-12T15:13:08+11:00">2017-11-12T15:13:08+11:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-12T15:18:45+11:00">2017-11-12T15:18:45+11:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.92%</span></span>
+    (<span class="covered_percent"><span class="green">95.6%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.37
+         2.44
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>315</b> relevant lines. 
-    <span class="green"><b>299</b> lines covered</span> and
-    <span class="red"><b>16</b> lines missed </span>
+    <b>318</b> relevant lines. 
+    <span class="green"><b>304</b> lines covered</span> and
+    <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#78c6410458e09b9f83939c1a54402139e2d12ac2" class="src_link" title="lib/command.rb">lib/command.rb</a></td>
-        <td class="yellow strong">89.06 %</td>
+        <td class="green strong">92.19 %</td>
         <td>114</td>
         <td>64</td>
-        <td>57</td>
-        <td>7</td>
-        <td>4.9</td>
+        <td>59</td>
+        <td>5</td>
+        <td>5.2</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>44</td>
         <td>35</td>
         <td>9</td>
-        <td>1.1</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -87,15 +87,15 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>9.1</td>
+        <td>9.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#e3b43076c1876965d2eb6e61d24950f1e8b5c21c" class="src_link" title="spec/command_spec.rb">spec/command_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>159</td>
-        <td>80</td>
-        <td>80</td>
+        <td>165</td>
+        <td>83</td>
+        <td>83</td>
         <td>0</td>
         <td>1.4</td>
       </tr>
@@ -139,11 +139,11 @@
         <div class="source_table" id="78c6410458e09b9f83939c1a54402139e2d12ac2">
   <div class="header">
     <h3>lib/command.rb</h3>
-    <h4><span class="yellow">89.06 %</span> covered</h4>
+    <h4><span class="green">92.19 %</span> covered</h4>
     <div>
       <b>64</b> relevant lines. 
-      <span class="green"><b>57</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <span class="green"><b>59</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -198,20 +198,20 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="9">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="18" data-linenumber="9">
+          <span class="hits">18</span>
           
           <code class="ruby">    @table = Table.new</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="10">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="18" data-linenumber="10">
+          <span class="hits">18</span>
           
           <code class="ruby">    @robot = Robot.new</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="11">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="18" data-linenumber="11">
+          <span class="hits">18</span>
           
           <code class="ruby">    @messages = Messages.new</code>
         </li>
@@ -282,8 +282,8 @@
           <code class="ruby">  def execute(input)</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="23">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="26" data-linenumber="23">
+          <span class="hits">26</span>
           
           <code class="ruby">    return if input.strip.empty?</code>
         </li>
@@ -294,20 +294,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="25">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="24" data-linenumber="25">
+          <span class="hits">24</span>
           
           <code class="ruby">    input_split = input.split(/\s+/) #splits the input according to one or more space characters</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="26">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="24" data-linenumber="26">
+          <span class="hits">24</span>
           
           <code class="ruby">    command = input_split.first</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="27">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="24" data-linenumber="27">
+          <span class="hits">24</span>
           
           <code class="ruby">    arguments = input_split.last</code>
         </li>
@@ -318,8 +318,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="29">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="24" data-linenumber="29">
+          <span class="hits">24</span>
           
           <code class="ruby">    case command</code>
         </li>
@@ -342,8 +342,8 @@
           <code class="ruby">    when &#39;REPORT&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="33">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="33">
+          <span class="hits">3</span>
           
           <code class="ruby">      report</code>
         </li>
@@ -390,8 +390,8 @@
           <code class="ruby">    when &#39;HELP&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
-          
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
           <code class="ruby">      help</code>
         </li>
@@ -738,8 +738,8 @@
           <code class="ruby">  def report</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="99">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="99">
+          <span class="hits">3</span>
           
           <code class="ruby">    if @table.robot_present?</code>
         </li>
@@ -774,8 +774,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="105">
-          
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
           
           <code class="ruby">      @messages.robot_not_placed</code>
         </li>
@@ -1099,8 +1099,8 @@
           <code class="ruby">  def robot_not_placed</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="42">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="42">
+          <span class="hits">4</span>
           
           <code class="ruby">    puts &quot;\n````ERROR````\nYou have not placed the Robot on the table yet. Try enter PLACE,X,Y,DIRECTION&quot;</code>
         </li>
@@ -1629,8 +1629,8 @@
           <code class="ruby">  def robot_present?</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="12">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="12">
+          <span class="hits">12</span>
           
           <code class="ruby">    self.robot_position != nil</code>
         </li>
@@ -1687,8 +1687,8 @@
     <h3>spec/command_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>80</b> relevant lines. 
-      <span class="green"><b>80</b> lines covered</span> and
+      <b>83</b> relevant lines. 
+      <span class="green"><b>83</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1798,8 +1798,8 @@
           <code class="ruby">  let(:robot) { Robot.new }</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="18">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="18">
+          <span class="hits">11</span>
           
           <code class="ruby">  let(:command) { Command.new }</code>
         </li>
@@ -2029,7 +2029,7 @@
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is PLACE with invalid coordinates&quot; do</code>
+          <code class="ruby">  context &quot;when input is REPORT before placing robot&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="57">
@@ -2041,7 +2041,7 @@
         <li class="covered" data-hits="2" data-linenumber="58">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect{command.execute(&quot;PLACE 6,6,NORTH&quot;)}.to output(&quot;\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n&quot;).to_stdout</code>
+          <code class="ruby">      expect{command.execute(&quot;REPORT&quot;)}.to output(&quot;\n````ERROR````\nYou have not placed the Robot on the table yet. Try enter PLACE,X,Y,DIRECTION\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
@@ -2065,7 +2065,7 @@
         <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is PLACE with invalid direction&quot; do</code>
+          <code class="ruby">  context &quot;when input is PLACE with invalid coordinates&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
@@ -2077,7 +2077,7 @@
         <li class="covered" data-hits="2" data-linenumber="64">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect{command.execute(&quot;PLACE 2,2,DOWN&quot;)}.to output(&quot;\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n&quot;).to_stdout</code>
+          <code class="ruby">      expect{command.execute(&quot;PLACE 6,6,NORTH&quot;)}.to output(&quot;\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
@@ -2101,19 +2101,19 @@
         <li class="covered" data-hits="1" data-linenumber="68">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is PLACE with valid coordinates and direction&quot; do</code>
+          <code class="ruby">  context &quot;when input is PLACE with invalid direction&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;will show a confirm message&quot; do</code>
+          <code class="ruby">    it &quot;will show an error message&quot; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="70">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect{command.execute(&quot;PLACE 2,2,NORTH&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has been placed. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
+          <code class="ruby">      expect{command.execute(&quot;PLACE 2,2,DOWN&quot;)}.to output(&quot;\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
@@ -2131,121 +2131,121 @@
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  context &quot;when input is PLACE with valid coordinates and direction&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="75">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &#39;taking commands after robot placement&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="76">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  let(:table) { Table.new }</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="77">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  let(:robot) { Robot.new }</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="78">
-          <span class="hits">8</span>
-          
-          <code class="ruby">  let(:command) { Command.new }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="80">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  context &quot;when input is LEFT after robot placement&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="81">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="82">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      command.execute(&quot;PLACE 2,2,NORTH&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="84">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="85">
-          <span class="hits">1</span>
-          
           <code class="ruby">    it &quot;will show a confirm message&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="86">
+        <li class="covered" data-hits="2" data-linenumber="76">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect{command.execute(&quot;LEFT&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
+          <code class="ruby">      expect{command.execute(&quot;PLACE 2,2,NORTH&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has been placed. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="90">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is RIGHT after robot placement&quot; do</code>
+          <code class="ruby">describe &#39;taking commands after robot placement&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let(:table) { Table.new }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  let(:robot) { Robot.new }</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="84">
+          <span class="hits">8</span>
+          
+          <code class="ruby">  let(:command) { Command.new }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  context &quot;when input is LEFT after robot placement&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
           <span class="hits">1</span>
           
           <code class="ruby">    before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="92">
+        <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
           <code class="ruby">      command.execute(&quot;PLACE 2,2,NORTH&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;will show a confirm message&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="92">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect{command.execute(&quot;LEFT&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
@@ -2257,55 +2257,55 @@
         <li class="never" data-hits="" data-linenumber="94">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="95">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &quot;will show a confirm message&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="96">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      expect{command.execute(&quot;RIGHT&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="97">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="98">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="100">
+        <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is REPORT after robot placement&quot; do</code>
+          <code class="ruby">  context &quot;when input is RIGHT after robot placement&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="101">
+        <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
           <code class="ruby">    before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="102">
+        <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
-          <code class="ruby">      command.execute(&#39;PLACE 2,2,NORTH&#39;)</code>
+          <code class="ruby">      command.execute(&quot;PLACE 2,2,NORTH&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;will show a confirm message&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="102">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect{command.execute(&quot;RIGHT&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
@@ -2317,37 +2317,37 @@
         <li class="never" data-hits="" data-linenumber="104">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="105">
+        <li class="covered" data-hits="1" data-linenumber="106">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;will display the robot&#39;s current position in X,Y,D format&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="106">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      expect{command.execute(&#39;REPORT&#39;)}.to output(&quot;\n````ROBOT STATUS````\nPosition: 2,2,NORTH\n&quot;).to_stdout</code>
+          <code class="ruby">  context &quot;when input is REPORT after robot placement&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(command.execute(&#39;REPORT&#39;)).to eq &quot;2,2,NORTH&quot;</code>
+          <code class="ruby">    before do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="108">
+        <li class="covered" data-hits="1" data-linenumber="108">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      command.execute(&#39;PLACE 2,2,NORTH&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="109">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="110">
@@ -2359,19 +2359,19 @@
         <li class="covered" data-hits="1" data-linenumber="111">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is MOVE after robot placement and is within bounds&quot; do</code>
+          <code class="ruby">    it &quot;will display the robot&#39;s current position in X,Y,D format&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="112">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="112">
+          <span class="hits">2</span>
           
-          <code class="ruby">    before do</code>
+          <code class="ruby">      expect{command.execute(&#39;REPORT&#39;)}.to output(&quot;\n````ROBOT STATUS````\nPosition: 2,2,NORTH\n&quot;).to_stdout</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="113">
           <span class="hits">1</span>
           
-          <code class="ruby">      command.execute(&#39;PLACE 2,2,NORTH&#39;)</code>
+          <code class="ruby">      expect(command.execute(&#39;REPORT&#39;)).to eq &quot;2,2,NORTH&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
@@ -2383,55 +2383,55 @@
         <li class="never" data-hits="" data-linenumber="115">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="116">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="117">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      expect{command.execute(&#39;MOVE&#39;)}.to output(&quot;\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="118">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="119">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="never" data-hits="" data-linenumber="116">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="121">
+        <li class="covered" data-hits="1" data-linenumber="117">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is MOVE after robot placement and is out of bounds&quot; do</code>
+          <code class="ruby">  context &quot;when input is MOVE after robot placement and is within bounds&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="122">
+        <li class="covered" data-hits="1" data-linenumber="118">
           <span class="hits">1</span>
           
           <code class="ruby">    before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="123">
+        <li class="covered" data-hits="1" data-linenumber="119">
           <span class="hits">1</span>
           
-          <code class="ruby">      command.execute(&#39;PLACE 5,5,NORTH&#39;)</code>
+          <code class="ruby">      command.execute(&#39;PLACE 2,2,NORTH&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="123">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect{command.execute(&#39;MOVE&#39;)}.to output(&quot;\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="124">
@@ -2443,55 +2443,55 @@
         <li class="never" data-hits="" data-linenumber="125">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="126">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="127">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      expect{command.execute(&#39;MOVE&#39;)}.to output(&quot;\n````ERROR````\nYour robot will fall of the table. And die. And ressurect. Turn super saiyan. And blow up the earth.\n&quot;).to_stdout</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="128">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="129">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="130">
+        <li class="never" data-hits="" data-linenumber="126">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="131">
+        <li class="covered" data-hits="1" data-linenumber="127">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is PLACE after robot placement and is a valid placement&quot; do</code>
+          <code class="ruby">  context &quot;when input is MOVE after robot placement and is out of bounds&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="132">
+        <li class="covered" data-hits="1" data-linenumber="128">
           <span class="hits">1</span>
           
           <code class="ruby">    before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="133">
+        <li class="covered" data-hits="1" data-linenumber="129">
           <span class="hits">1</span>
           
           <code class="ruby">      command.execute(&#39;PLACE 5,5,NORTH&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="133">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect{command.execute(&#39;MOVE&#39;)}.to output(&quot;\n````ERROR````\nYour robot will fall of the table. And die. And ressurect. Turn super saiyan. And blow up the earth.\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="134">
@@ -2503,55 +2503,55 @@
         <li class="never" data-hits="" data-linenumber="135">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="136">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="137">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      expect{command.execute(&quot;PLACE 2,2,NORTH&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has been placed. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="138">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="139">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="140">
+        <li class="never" data-hits="" data-linenumber="136">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="141">
+        <li class="covered" data-hits="1" data-linenumber="137">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;when input is PLACE after robot placement and is an invalid placement&quot; do</code>
+          <code class="ruby">  context &quot;when input is PLACE after robot placement and is a valid placement&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="142">
+        <li class="covered" data-hits="1" data-linenumber="138">
           <span class="hits">1</span>
           
           <code class="ruby">    before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="143">
+        <li class="covered" data-hits="1" data-linenumber="139">
           <span class="hits">1</span>
           
           <code class="ruby">      command.execute(&#39;PLACE 5,5,NORTH&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="141">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="143">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect{command.execute(&quot;PLACE 2,2,NORTH&quot;)}.to output(&quot;\n````CONFIRM````\nRobot has been placed. You can enter REPORT to see current robot position\n&quot;).to_stdout</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="144">
@@ -2563,37 +2563,37 @@
         <li class="never" data-hits="" data-linenumber="145">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="146">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="146">
+        <li class="covered" data-hits="1" data-linenumber="147">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
+          <code class="ruby">  context &quot;when input is PLACE after robot placement and is an invalid placement&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="147">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
           
-          <code class="ruby">      expect{command.execute(&quot;PLACE 6,6,NORTH&quot;)}.to output(&quot;\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n&quot;).to_stdout</code>
+          <code class="ruby">    before do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="148">
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="149">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      command.execute(&#39;PLACE 5,5,NORTH&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="150">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
@@ -2605,46 +2605,82 @@
         <li class="covered" data-hits="1" data-linenumber="152">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &quot;when input is HELP&quot; do</code>
+          <code class="ruby">    it &quot;will display a confirm message&quot; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="153">
           <span class="hits">2</span>
           
-          <code class="ruby">  let(:command) { Command.new }</code>
+          <code class="ruby">      expect{command.execute(&quot;PLACE 6,6,NORTH&quot;)}.to output(&quot;\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n&quot;).to_stdout</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="154">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="154">
           
-          <code class="ruby">  it &quot;will show instructions&quot; do</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="155">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    expect{command.help}.to output(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="156">
-          
-          
-          <code class="ruby">      &quot;---------------------------\nINSTRUCTIONS\n---------------------------\nYour key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT.\n\n--- PLACE X,Y,D ---\nIt will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example: PLACE 2,2,NORTH\n\n--- MOVE ---\nIt will move the toy robot one unit forward in the direction it is currently facing.\n\n--- LEFT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- RIGHT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- REPORT ---\nIt will announce the X,Y and F of the robot.\n\n--- HELP ---\nIt will display the instructions.\n\n--- EXIT ---\nIt will exit the application\n&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="157">
-          
-          
-          <code class="ruby">    ).to_stdout</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="158">
+        <li class="never" data-hits="" data-linenumber="155">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="159">
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;when input is HELP&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="159">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:command) { Command.new }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;will show instructions&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="161">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    expect{command.execute(&#39;HELP&#39;)}.to output(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">      &quot;---------------------------\nINSTRUCTIONS\n---------------------------\nYour key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT.\n\n--- PLACE X,Y,D ---\nIt will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example: PLACE 2,2,NORTH\n\n--- MOVE ---\nIt will move the toy robot one unit forward in the direction it is currently facing.\n\n--- LEFT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- RIGHT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- REPORT ---\nIt will announce the X,Y and F of the robot.\n\n--- HELP ---\nIt will display the instructions.\n\n--- EXIT ---\nIt will exit the application\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby">    ).to_stdout</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="165">
           
           
           <code class="ruby">end</code>
