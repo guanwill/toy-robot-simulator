@@ -130,7 +130,7 @@ describe 'taking commands after robot placement' do
     end
 
     it "will display a confirm message" do
-      expect{command.execute('MOVE')}.to output("\n````ERROR````\nYour robot will fall of the table. And die. And ressurect. Turn super saiyan. And blow up the earth.\n").to_stdout
+      expect{command.execute('MOVE')}.to output("\n````ERROR````\nYour robot will fall of the table. And die. And resurrect. Turn super saiyan. And blow up the earth.\n").to_stdout
     end
   end
 

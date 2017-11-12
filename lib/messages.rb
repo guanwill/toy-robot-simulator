@@ -59,7 +59,7 @@ class Messages
   end
 
   def off_table
-    puts "\n````ERROR````\nYour robot will fall of the table. And die. And ressurect. Turn super saiyan. And blow up the earth."
+    puts "\n````ERROR````\nYour robot will fall of the table. And die. And resurrect. Turn super saiyan. And blow up the earth."
   end
 
 end
