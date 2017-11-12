@@ -4,6 +4,14 @@ require_relative '../lib/robot'
 require_relative '../lib/command'
 require_relative '../lib/messages'
 
+# describe 'initializing the game' do
+#   let(:command) { Command.new }
+#
+#   it "will prompt for user input" do
+#     expect(command.initiate).to eq ("\nPlease enter a command below...\n")
+#   end
+# end
+
 describe 'taking commands before robot placement' do
   let(:table) { Table.new }
   let(:robot) { Robot.new }
@@ -27,9 +35,27 @@ describe 'taking commands before robot placement' do
     end
   end
 
-  context "when input is a valid command, but is not PLACE, before placing robot" do
+  context "when input is MOVE before placing robot" do
     it "will show an error message" do
       expect{command.execute("MOVE")}.to output("\n````ERROR````\nYou have not placed the Robot on the table yet. Try enter PLACE,X,Y,DIRECTION\n").to_stdout
+    end
+  end
+
+  context "when input is LEFT before placing robot" do
+    it "will show an error message" do
+      expect{command.execute("LEFT")}.to output("\n````ERROR````\nYou have not placed the Robot on the table yet. Try enter PLACE,X,Y,DIRECTION\n").to_stdout
+    end
+  end
+
+  context "when input is RIGHT before placing robot" do
+    it "will show an error message" do
+      expect{command.execute("RIGHT")}.to output("\n````ERROR````\nYou have not placed the Robot on the table yet. Try enter PLACE,X,Y,DIRECTION\n").to_stdout
+    end
+  end
+
+  context "when input is REPORT before placing robot" do
+    it "will show an error message" do
+      expect{command.execute("REPORT")}.to output("\n````ERROR````\nYou have not placed the Robot on the table yet. Try enter PLACE,X,Y,DIRECTION\n").to_stdout
     end
   end
 
@@ -57,13 +83,23 @@ describe 'taking commands after robot placement' do
   let(:robot) { Robot.new }
   let(:command) { Command.new }
 
-  context "when input is LEFT or RIGHT after robot placement" do
+  context "when input is LEFT after robot placement" do
     before do
       command.execute("PLACE 2,2,NORTH")
     end
 
     it "will show a confirm message" do
       expect{command.execute("LEFT")}.to output("\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n").to_stdout
+    end
+  end
+
+  context "when input is RIGHT after robot placement" do
+    before do
+      command.execute("PLACE 2,2,NORTH")
+    end
+
+    it "will show a confirm message" do
+      expect{command.execute("RIGHT")}.to output("\n````CONFIRM````\nRobot has moved. You can enter REPORT to see current robot position\n").to_stdout
     end
   end
 
@@ -117,5 +153,13 @@ describe 'taking commands after robot placement' do
       expect{command.execute("PLACE 6,6,NORTH")}.to output("\n````ERROR````\nInvalid placement. Please try again or type HELP for instructions.\n").to_stdout
     end
   end
+end
 
+describe "when input is HELP" do
+  let(:command) { Command.new }
+  it "will show instructions" do
+    expect{command.help}.to output(
+      "---------------------------\nINSTRUCTIONS\n---------------------------\nYour key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT.\n\n--- PLACE X,Y,D ---\nIt will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example: PLACE 2,2,NORTH\n\n--- MOVE ---\nIt will move the toy robot one unit forward in the direction it is currently facing.\n\n--- LEFT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- RIGHT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- REPORT ---\nIt will announce the X,Y and F of the robot.\n\n--- HELP ---\nIt will display the instructions.\n\n--- EXIT ---\nIt will exit the application\n"
+    ).to_stdout
+  end
 end

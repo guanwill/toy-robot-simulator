@@ -41,11 +41,7 @@ class Robot
       { x: -1, y: 0 }
     when "EAST"
       { x: 1, y: 0 }
-    else
-      raise "Unknown orientation #{self.orientation}"
     end
   end
-
-
 
 end
