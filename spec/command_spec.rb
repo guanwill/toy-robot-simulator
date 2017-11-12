@@ -130,7 +130,7 @@ describe 'taking commands after robot placement' do
     end
 
     it "will display a confirm message" do
-      expect{command.execute('MOVE')}.to output("\n````ERROR````\nYour robot will fall of the table. And die. And resurrect. Turn super saiyan. And blow up the earth.\n").to_stdout
+      expect{command.execute('MOVE')}.to output("\n````ERROR````\nYour robot will fall off the table. And die. And resurrect. Turn super saiyan. And blow up the earth.\n").to_stdout
     end
   end
 
@@ -159,7 +159,7 @@ describe "when input is HELP" do
   let(:command) { Command.new }
   it "will show instructions" do
     expect{command.execute('HELP')}.to output(
-      "---------------------------\nINSTRUCTIONS\n---------------------------\nYour key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT.\n\n--- PLACE X,Y,D ---\nIt will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example: PLACE 2,2,NORTH\n\n--- MOVE ---\nIt will move the toy robot one unit forward in the direction it is currently facing.\n\n--- LEFT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- RIGHT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- REPORT ---\nIt will announce the X,Y and F of the robot.\n\n--- HELP ---\nIt will display the instructions.\n\n--- EXIT ---\nIt will exit the application\n"
+      "---------------------------\nINSTRUCTIONS\n---------------------------\nYour key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT. Trailing inputs for command other than PLACE will be ignored.\n\n--- PLACE X,Y,D ---\nIt will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example: PLACE 2,2,NORTH\n\n--- MOVE ---\nIt will move the toy robot one unit forward in the direction it is currently facing.\n\n--- LEFT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- RIGHT ---\nIt will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n\n--- REPORT ---\nIt will announce the X,Y and F of the robot.\n\n--- HELP ---\nIt will display the instructions.\n\n--- EXIT ---\nIt will exit the application\n"
     ).to_stdout
   end
 end

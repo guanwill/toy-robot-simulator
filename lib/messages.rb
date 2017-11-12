@@ -4,7 +4,7 @@ class Messages
     puts "---------------------------"
     puts "INSTRUCTIONS"
     puts "---------------------------"
-    puts "Your key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT.\n\n"
+    puts "Your key commands are PLACE, MOVE, LEFT, RIGHT, REPORT, HELP, and EXIT. Trailing inputs for command other than PLACE will be ignored.\n\n"
     puts "--- PLACE X,Y,D ---\n"
     puts "It will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example: PLACE 2,2,NORTH\n\n"
     puts "--- MOVE ---\n"
@@ -19,19 +19,6 @@ class Messages
     puts "It will display the instructions.\n\n"
     puts "--- EXIT ---\n"
     puts "It will exit the application\n"
-  end
-
-  # Currently not used
-  def prompt_for_command
-    puts "---------------------------"
-    puts "ENTER ONE OF THE FOLLOWING"
-    puts "---------------------------"
-    puts "PLACE X,Y,DIRECTION"
-    puts "LEFT OR RIGHT"
-    puts "MOVE"
-    puts "REPORT"
-    puts "INSTRUCTIONS"
-    puts "EXIT"
   end
 
   def invalid_command
@@ -59,7 +46,7 @@ class Messages
   end
 
   def off_table
-    puts "\n````ERROR````\nYour robot will fall of the table. And die. And resurrect. Turn super saiyan. And blow up the earth."
+    puts "\n````ERROR````\nYour robot will fall off the table. And die. And resurrect. Turn super saiyan. And blow up the earth."
   end
 
 end
